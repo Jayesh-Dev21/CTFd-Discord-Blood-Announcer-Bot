@@ -2,7 +2,6 @@
 
 figlet "Start.sh" -f slant
 
-# Print banner
 if command -v figlet >/dev/null 2>&1; then
     figlet "SETUP" -f slant
 else
@@ -13,9 +12,6 @@ echo
 echo "Initializing environment..."
 echo
 
-# ---------------------------------------------
-# ENV SETUP SECTION
-# ---------------------------------------------
 if [ -f .env ]; then
     echo ".env already exists. Skipping setup."
 else
@@ -52,12 +48,9 @@ else
     echo
 fi
 
-# Load environment variables (before running container)
+# Load env
 source .env
 
-# ---------------------------------------------
-# RUN DOCKER SECTION
-# ---------------------------------------------
 figlet "Building & Running Bot" -f slant
 echo "Starting Docker container..."
 echo
@@ -84,3 +77,5 @@ sudo docker run -d \
   ctfd-blood-bot
 
 echo "✅ Bot started and data is persistent."
+
+figlet "DONE /|\ Running " -f slant
