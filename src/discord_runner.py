@@ -10,9 +10,10 @@ import pyfiglet
 # ==========================
 # --- Configuration ---
 # ==========================
+os.makedirs("files", exist_ok=True)
 
-SOLVES_FILE = "solves.json"
-BLOOD_FILE = "blood.json"
+SOLVES_FILE = "files/solves.json"
+BLOOD_FILE = "files/blood.json"
 
 load_dotenv()
 BOT_TOKEN = os.getenv("BOT_TOKEN")
