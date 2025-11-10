@@ -1,0 +1,6 @@
+.venv
+/restricted
+.env
+.directory
+
+
