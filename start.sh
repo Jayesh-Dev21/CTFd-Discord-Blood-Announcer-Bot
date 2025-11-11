@@ -68,7 +68,7 @@ docker build -t ctfd-blood-bot .
 # Run container
 sudo docker run -d \
   --name ctfd-blood-bot \
-  --restart unless-stopped \
+  --restart no \
   -v $(pwd)/data:/app/data \
   -e BOT_TOKEN="${BOT_TOKEN}" \
   -e CH_ID="${CH_ID}" \
